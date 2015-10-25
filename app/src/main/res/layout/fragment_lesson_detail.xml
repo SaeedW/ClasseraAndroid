@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.classera1.newtaskwithapi.fragments.LessonDetail">
+
+    <VideoView android:id="@+id/videoView" android:layout_width="match_parent" android:layout_height="150dp"
+        android:layout_below="@+id/lesson_edit"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="TEXT"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/lesson_edit"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_play"
+        android:background="@drawable/play"
+        android:src="@drawable/play"
+        android:layout_alignTop="@+id/videoView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:id="@+id/comment_list"
+        android:layout_below="@+id/videoView"
+        android:layout_alignParentStart="true"
+        android:choiceMode="singleChoice" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/ccc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_list"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="26dp"
+        android:layout_toStartOf="@+id/sendCommentButton"
+        android:layout_alignParentBottom="true" >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:hint="Write your Comment...."
+        android:id="@+id/comment_edit"
+     />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/sendCommentButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="No Comments For This Lesson"
+        android:id="@+id/noc"
+        android:layout_alignTop="@+id/comment_list"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp" />
+
+</RelativeLayout>

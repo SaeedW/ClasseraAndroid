@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:id="@+id/main_layout_splash"
+    tools:context="com.classera1.newtaskwithapi.SplashScreen">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="89dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="loading..."
+        android:id="@+id/text_error"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/imageView2"
+        android:layout_marginEnd="52dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialog"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/text_error"
+        android:indeterminate="false" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up Now !"
+        android:id="@+id/signup"
+        android:layout_alignBottom="@+id/text_error"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_below="@+id/dialog"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
